@@ -1,0 +1,193 @@
+{
+	"info": {
+		"_postman_id": "b4c9a296-feae-4578-96eb-c70547369f55",
+		"name": "automat-application",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Payment Types",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/definition/payment-types",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"definition",
+						"payment-types"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Beverage Types",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/definition/beverage-types",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"definition",
+						"beverage-types"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product Types",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/definition/product-types",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"definition",
+						"product-types"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Order Pay CONTACT",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"productId\" : 1,\n    \"paymentType\" : \"CONTACT\",\n    \"paymentAmount\" : 10.00,\n    \"num\" : 4,\n    \"beverageType\" : \"HOT\",\n    \"numberOfSugar\" : 3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/order",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Order Pay CONTACTLESS",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"productId\" : 1,\n    \"paymentType\" : \"CONTACTLESS\",\n    \"creditCardPassword\": \"1234\",\n    \"paymentAmount\" : 10.00,\n    \"num\" : 4,\n    \"beverageType\" : \"HOT\",\n    \"numberOfSugar\" : 3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/order",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Order Pay BANKNOTE",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"productId\" : 1,\n    \"paymentType\" : \"BANKNOTE\",\n    \"paymentAmount\" : 20.00,\n    \"num\" : 4,\n    \"beverageType\" : \"HOT\",\n    \"numberOfSugar\" : 3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/order",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Order Pay COIN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"productId\" : 1,\n    \"paymentType\" : \"COIN\",\n    \"paymentAmount\" : 4.00,\n    \"num\" : 4,\n    \"beverageType\" : \"HOT\",\n    \"numberOfSugar\" : 3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/order",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transaction",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/transaction/d94f502b-b5c6-42ae-bb79-2fe70196c049",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transaction",
+						"d94f502b-b5c6-42ae-bb79-2fe70196c049"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
